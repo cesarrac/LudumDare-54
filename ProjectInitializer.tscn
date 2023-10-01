@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gvqegykp40m2"]
+
+[ext_resource type="Script" path="res://ProjectInitializer.gd" id="1"]
+
+[node name="ProjectInitializer" type="Node2D"]
+script = ExtResource("1")
+folder_names = ["Assets", "Scripts", "Resources", "Scenes", "Scripts/Controllers", "Scripts/Utility", "Scripts/Data", "Scripts/UI", "Scenes/Game", "Scenes/UI", "Scripts/States"]

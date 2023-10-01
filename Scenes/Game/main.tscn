@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b2k316y14f0h"]
+
+[node name="Main" type="Node2D"]
+
+[node name="GameMgr" type="Node" parent="."]
+
+[node name="services" type="Node2D" parent="GameMgr"]
+
+[node name="dialog_mgr" type="Node2D" parent="GameMgr"]
+
+[node name="player_journal" type="Node2D" parent="GameMgr"]
+
+[node name="player_input" type="Node2D" parent="GameMgr"]
+
+[node name="map_control" type="Node2D" parent="GameMgr"]
+
+[node name="tilemap" type="TileMap" parent="GameMgr/map_control"]
+format = 2
+
+[node name="ui" type="CanvasLayer" parent="GameMgr"]
