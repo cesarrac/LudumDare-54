@@ -1,49 +1,90 @@
-[gd_scene load_steps=7 format=3 uid="uid://cti7k4h0u2fak"]
+[gd_scene load_steps=10 format=3 uid="uid://cti7k4h0u2fak"]
 
 [ext_resource type="Theme" uid="uid://dxedjov5qmyxu" path="res://def_theme.tres" id="1_kxblk"]
-[ext_resource type="Texture2D" uid="uid://5kuqpkf0atx2" path="res://Assets/RectA.png" id="2_tq0ml"]
+[ext_resource type="Texture2D" uid="uid://chox6v1e2ns4h" path="res://Assets/blank_panels.png" id="2_7ad8p"]
 [ext_resource type="Texture2D" uid="uid://cnf68ri0pfip" path="res://Assets/Kobev4.png" id="3_hu1qu"]
-[ext_resource type="Texture2D" uid="uid://cc0e18a7pruvg" path="res://Assets/Arrow_wht_down.png" id="4_dmj7i"]
+[ext_resource type="Texture2D" uid="uid://bxhneb2q0f8l5" path="res://Assets/flat_white_ui.png" id="4_6ydfl"]
 [ext_resource type="Texture2D" uid="uid://cvs2pw0h8c04b" path="res://Assets/RectA_bg.png" id="5_rg50j"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_appa1"]
+atlas = ExtResource("2_7ad8p")
+region = Rect2(97, 97, 30, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cad7g"]
+atlas = ExtResource("2_7ad8p")
+region = Rect2(16, 15, 97, 51)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1gx7"]
-texture = ExtResource("2_tq0ml")
-texture_margin_left = 3.0
-texture_margin_top = 3.0
-texture_margin_right = 3.0
+texture = SubResource("AtlasTexture_cad7g")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 2.0
 texture_margin_bottom = 3.0
-draw_center = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7p33f"]
+atlas = ExtResource("4_6ydfl")
+region = Rect2(0, 0, 16, 16)
 
 [node name="DialogPanel" type="Control"]
 custom_minimum_size = Vector2(480, 400)
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -160.0
-offset_right = 256.0
-offset_bottom = 160.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+mouse_filter = 2
 theme = ExtResource("1_kxblk")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="bg" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+color = Color(0.47451, 0.635294, 0.670588, 0.360784)
 
-[node name="from" type="Label" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(512, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -256.0
+offset_top = -200.0
+offset_right = 256.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="header" type="NinePatchRect" parent="VBoxContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+texture = SubResource("AtlasTexture_appa1")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="m" type="MarginContainer" parent="VBoxContainer/header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_right = 16
+
+[node name="from" type="Label" parent="VBoxContainer/header/m"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 32
 text = "Dialog from X"
 uppercase = true
@@ -62,9 +103,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 8
-theme_override_constants/margin_right = 16
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 6
 
 [node name="vbox" type="VBoxContainer" parent="VBoxContainer/diag_panel/m"]
@@ -85,7 +126,8 @@ expand_mode = 2
 [node name="dialog_text" type="RichTextLabel" parent="VBoxContainer/diag_panel/m/vbox"]
 custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
-theme_override_font_sizes/normal_font_size = 32
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "TEST DIALOG"
 
@@ -93,17 +135,19 @@ text = "TEST DIALOG"
 layout_mode = 2
 
 [node name="btn_box" type="HBoxContainer" parent="VBoxContainer/diag_panel/m/vbox"]
-custom_minimum_size = Vector2(0, 32)
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 alignment = 2
 
 [node name="continue_btn" type="TextureButton" parent="VBoxContainer/diag_panel/m/vbox/btn_box"]
-custom_minimum_size = Vector2(32, 0)
+texture_filter = 1
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
-texture_normal = ExtResource("4_dmj7i")
+texture_normal = SubResource("AtlasTexture_7p33f")
 stretch_mode = 0
 
 [node name="bg" type="TextureRect" parent="VBoxContainer/diag_panel"]
+visible = false
 z_index = -1
 layout_mode = 1
 anchors_preset = 15

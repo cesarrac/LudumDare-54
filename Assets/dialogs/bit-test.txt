@@ -1,0 +1,16 @@
+#tester_1
+Hi there this is a bitcheck test!
+Are you ready?:
+$ready:Lets go!
+#ready
+[BITCHECK(test,testTrue,testFalse)]
+Ok let me see...
+[ADDBIT(test)]
+Nah it looks like you dont have that bit yet. Let me add it.
+There you go! Let's try that again!
+[#tester(1)]
+#testTrue
+Congrats the bitcheck passed!
+#testFalse
+Hmm the bitcheck failed...
+

@@ -1,10 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://cn2utypqdr55q"]
+[gd_scene load_steps=5 format=3 uid="uid://cn2utypqdr55q"]
 
 [ext_resource type="Theme" uid="uid://dxedjov5qmyxu" path="res://def_theme.tres" id="1_4kfsj"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d04tt"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edaq6"]
+bg_color = Color(0.5904, 0.777907, 0.82, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ectd4"]
+bg_color = Color(0.4757, 0.634378, 0.67, 1)
+
 [node name="DiagResponse" type="Label"]
 z_index = 1
-custom_minimum_size = Vector2(0, 64)
+custom_minimum_size = Vector2(0, 48)
 anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
@@ -15,7 +24,8 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
 text = "This is a label with a buttonvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -31,3 +41,6 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 3
 theme = ExtResource("1_4kfsj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_d04tt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_edaq6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ectd4")

@@ -9,6 +9,8 @@ They will be integrated within the environment. As you will.
 All necessary information will be provided.
 Here are your instructions for today:
 $instruct:Check the camera placements in each member space.
+#instruct_1
+[ADDBIT(camQuest)]
 Please work as fast as possible.
 The Party is due to arrive soon!
 

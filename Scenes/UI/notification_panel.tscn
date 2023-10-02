@@ -1,0 +1,144 @@
+[gd_scene load_steps=10 format=3 uid="uid://bx6nrnxpnor2f"]
+
+[ext_resource type="Texture2D" uid="uid://chox6v1e2ns4h" path="res://Assets/blank_panels.png" id="1_i5o78"]
+[ext_resource type="Theme" uid="uid://dxedjov5qmyxu" path="res://def_theme.tres" id="1_v1w7q"]
+[ext_resource type="Script" path="res://Scripts/Controllers/notification_panel.gd" id="2_demuh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgwo7"]
+atlas = ExtResource("1_i5o78")
+region = Rect2(48, 80, 32, 10)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o608"]
+bg_color = Color(0.831373, 0.164706, 0.164706, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2x8pg"]
+bg_color = Color(0.4, 0.0313726, 0.0313726, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epocj"]
+bg_color = Color(0.262745, 0.0313726, 0.0313726, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjnh1"]
+atlas = ExtResource("1_i5o78")
+region = Rect2(48, 89, 32, 23)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8a0c"]
+texture = SubResource("AtlasTexture_kjnh1")
+texture_margin_left = 1.0
+texture_margin_top = 1.0
+texture_margin_right = 1.0
+texture_margin_bottom = 1.0
+
+[node name="NotificationPanel" type="Control" node_paths=PackedStringArray("header_lbl", "content_lbl")]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_v1w7q")
+script = ExtResource("2_demuh")
+header_lbl = NodePath("notification/header/M/HBoxContainer/hdr_label")
+content_lbl = NodePath("notification/Panel/M/vbox/content/label")
+
+[node name="bg" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.47451, 0.635294, 0.670588, 0.360784)
+
+[node name="notification" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -160.0
+offset_right = 128.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="header" type="NinePatchRect" parent="notification"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+texture = SubResource("AtlasTexture_dgwo7")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+
+[node name="M" type="MarginContainer" parent="notification/header"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="notification/header/M"]
+layout_mode = 2
+alignment = 1
+
+[node name="hdr_label" type="Label" parent="notification/header/M/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "NOTIFICATION"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="close" type="Button" parent="notification/header/M/HBoxContainer"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+theme_override_styles/normal = SubResource("StyleBoxFlat_4o608")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2x8pg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_epocj")
+
+[node name="Panel" type="Panel" parent="notification"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxTexture_t8a0c")
+
+[node name="M" type="MarginContainer" parent="notification/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="vbox" type="VBoxContainer" parent="notification/Panel/M"]
+layout_mode = 2
+
+[node name="content" type="HBoxContainer" parent="notification/Panel/M/vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="label" type="Label" parent="notification/Panel/M/vbox/content"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "Message!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="notification/header/M/HBoxContainer/close" to="." method="_on_close_pressed"]

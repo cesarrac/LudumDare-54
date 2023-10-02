@@ -1,9 +1,11 @@
 extends CanvasLayer
+class_name UIMgr
 
 @export var text_label : RichTextLabel
 @export var opt_box : VBoxContainer
 @export var cont_btn : TextureButton
 @export var from_lbl : Label
+@export var nxt_ch_btn : Button
 @onready var resp_scn = preload("res://Scenes/UI/diag_response.tscn")
 
 func _ready():
@@ -40,6 +42,12 @@ func end_dialog()->void:
 func toggle_cont_btn(show : bool)->void:
 	if show: cont_btn.show()
 	else: cont_btn.hide()
+
+func toggle_nxt_ch_btn()->void:
+	if nxt_ch_btn.visible:
+		nxt_ch_btn.hide()
+		return
+	nxt_ch_btn.show()
 	
 func _continue_pressed()->void:
 	print('continue!!')
@@ -57,3 +65,10 @@ func _clear_opts()->void:
 		var chs = opt_box.get_children()
 		for r in chs:
 			r.queue_free()
+
+
+func _on_nxt_chapter_btn_pressed() -> void:
+	toggle_nxt_ch_btn()
+	EventMgr.fire_event(
+		"nxt_chapter_requested"
+	)
