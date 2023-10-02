@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc5i7sy1hgixb"]
+
+[ext_resource type="Texture2D" uid="uid://bipkptttprpto" path="res://Assets/move_arrow.png" id="1_hmsq5"]
+[ext_resource type="Script" path="res://Scripts/Controllers/dialog_trigger.gd" id="2_gi6xx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ps0w8"]
+size = Vector2(48, 48)
+
+[node name="DialogTrigger" type="Sprite2D"]
+texture_filter = 1
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hmsq5")
+hframes = 5
+script = ExtResource("2_gi6xx")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ps0w8")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

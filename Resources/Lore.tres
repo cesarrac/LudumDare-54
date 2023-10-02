@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://dm0s1mnhgpwxy"]
+
+[ext_resource type="Script" path="res://Scripts/Data/CharacterData.gd" id="1_43sht"]
+
+[resource]
+script = ExtResource("1_43sht")
+name = "Lore"
+character_color = Color(0.631373, 0.572549, 0.466667, 1)

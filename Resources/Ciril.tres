@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://mrc70ismabls"]
+
+[ext_resource type="Script" path="res://Scripts/Data/CharacterData.gd" id="1_gffmw"]
+
+[resource]
+script = ExtResource("1_gffmw")
+name = "Ciril"
+character_color = Color(0.631373, 0.231373, 0.631373, 1)

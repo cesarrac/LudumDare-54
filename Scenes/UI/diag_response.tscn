@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://cn2utypqdr55q"]
+
+[ext_resource type="Theme" uid="uid://dxedjov5qmyxu" path="res://def_theme.tres" id="1_4kfsj"]
+
+[node name="DiagResponse" type="Label"]
+z_index = 1
+custom_minimum_size = Vector2(0, 64)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -24.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 32
+text = "This is a label with a buttonvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="btn" type="Button" parent="."]
+z_index = -1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+theme = ExtResource("1_4kfsj")

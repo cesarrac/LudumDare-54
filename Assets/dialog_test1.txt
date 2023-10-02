@@ -1,0 +1,29 @@
+#questioner_1
+Hello! I am the QUESTIONER! Face my wrath!
+I'm here to ask you some questions.
+You ready?:
+$questionerAsks:Yup
+$questionerSad:Not really
+#questionerAsks_1
+Awesome! That was my question actually...
+[#questioner]
+#questionerSad_1
+Well that makes me quite sad...
+But you know what?
+[#questioner(2)]
+#questioner_2
+I also have the ability to jump to a specific state
+In any tag I want!
+Isn't that amazing?:
+$questionerSad:I don't think so
+$questionerBye:Sure
+#questionerBye_1
+I love this new dialog system.
+It makes things nice.
+And cozy.
+So I guess this is goodbye for now.
+Unless you want to start this conversation over?:
+$questioner:Yeah, let's start again.
+$end:I'm good, thanks.
+#end_1
+See ya later!

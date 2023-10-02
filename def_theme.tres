@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://dxedjov5qmyxu"]
+
+[ext_resource type="FontFile" uid="uid://dticjqnf8oapm" path="res://Assets/grestin.ttf" id="1_w8xa8"]
+
+[resource]
+default_base_scale = 1.0
+default_font = ExtResource("1_w8xa8")
+default_font_size = 12

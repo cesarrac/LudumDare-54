@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://dn0kpfv60r64r"]
+
+[ext_resource type="Script" path="res://Scripts/Data/CharacterData.gd" id="1_17me4"]
+
+[resource]
+script = ExtResource("1_17me4")
+name = "Jaldia"
+character_color = Color(0.396078, 0.521569, 0.839216, 1)

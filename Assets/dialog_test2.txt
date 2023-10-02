@@ -1,0 +1,20 @@
+#seeker_1
+[BITCHECK(mordRat,questWaiting,questCompleted)]
+Hello there! I am the famous quest giver!
+Tower above and save the crown.
+We have a mission for you! Will you accept it?:
+$acceptsQuest: Of course!
+$deniesQuest: I'm sorry, not right now.
+#acceptsQuest_1
+Very well! Here[TAKEQUEST(mordRat)] are the details.
+#deniesQuest_1
+Come back when you're ready to work then.
+#questCompleted_1
+You're back! Good!
+So you've vanquised the Great Rat of Mordimoor?
+That's amazing!
+Come back when you're ready for more work.
+#questWaiting_1
+Oh hey.
+Why are you back here?
+The Great Reat of Mordimoor still needs vanquishing!

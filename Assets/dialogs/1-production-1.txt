@@ -1,0 +1,14 @@
+#producers_1
+Welcome to the Space Limited team! As the newest member of our production team!
+Since you were one of our last hires, we really need you to start work right away.
+You’ll be placed in a production role in one of our Experience Houses, 
+where you will be given tasks by the Production Manager.
+We need all hands on deck for this one! 
+Don’t expect to see any of the other team members though.
+They will be integrated within the environment. As you will. 
+All necessary information will be provided.
+Here are your instructions for today:
+$instruct:Check the camera placements in each member space.
+Please work as fast as possible.
+The Party is due to arrive soon!
+

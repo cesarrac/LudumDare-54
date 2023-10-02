@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://do2m77kiyyc64"]
+
+[ext_resource type="PackedScene" uid="uid://dc5i7sy1hgixb" path="res://Scenes/Game/dialog_trigger.tscn" id="1_6jryk"]
+[ext_resource type="Texture2D" uid="uid://d0u6mgca7og0y" path="res://Assets/avatar.png" id="2_6vwi8"]
+[ext_resource type="Script" path="res://Scripts/Controllers/character_trigger.gd" id="3_4yfpv"]
+[ext_resource type="Theme" uid="uid://dxedjov5qmyxu" path="res://def_theme.tres" id="4_7p01e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y74op"]
+size = Vector2(24, 24)
+
+[node name="CharacterTrigger" instance=ExtResource("1_6jryk")]
+scale = Vector2(1, 1)
+texture = ExtResource("2_6vwi8")
+hframes = 1
+script = ExtResource("3_4yfpv")
+character_data_path = "res://Resources/Pavel.tres"
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_y74op")
+
+[node name="name_label" type="Label" parent="." index="1"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.5
+offset_top = 8.0
+offset_right = 27.5
+offset_bottom = 27.0
+grow_horizontal = 2
+theme = ExtResource("4_7p01e")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.631373, 0.145098, 0.564706, 1)
+text = "Character Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

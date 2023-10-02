@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://cyvrq10xb0ya0"]
+
+[ext_resource type="Script" path="res://Scripts/Data/CharacterData.gd" id="1_qq6l8"]
+
+[resource]
+script = ExtResource("1_qq6l8")
+name = "Isabel"
+character_color = Color(0.360784, 0.74902, 0.196078, 1)

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=2 format=3 uid="uid://dd3j5cv7v5i3u"]
+
+[ext_resource type="Script" path="res://Scripts/Data/CharacterData.gd" id="1_07kiv"]
+
+[resource]
+script = ExtResource("1_07kiv")
+name = "Adamadi"
+character_color = Color(0.788235, 0.537255, 0.101961, 1)

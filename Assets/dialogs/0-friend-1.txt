@@ -1,0 +1,23 @@
+#friend_1
+Congratulations on the new job! It was just a matter of time before you got it.
+Just remember, this isn't permament. This job is just a stepping stone:
+$friendNotcool:Yeah, I know! It's hard to accept it I guess.
+#friendNotcool_1
+You have way more career ahead of you!:
+$friendAnswer:I want to be out there working on beautiful, thoughtful content.
+#friendAnswer
+...:
+$friendListens:Not this vanitycore crap.
+#$friendListens
+Well it's not that bad...:
+$friendUgh:I mean, Reality tv? If someone would have told me Id be doing this!
+#friendUgh
+Ay por favor. Cállate! 
+It’s your first producer gig. What did you expect? 
+Things are going to go great once you stop texting me and actually go work!:
+$friendRight:Ya veremos. Talk to you later.
+$friendWhatever:I should've never let you talk me into this.
+#friendWhatever
+...
+#friendRight
+Byeee.
