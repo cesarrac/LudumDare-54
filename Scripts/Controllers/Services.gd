@@ -66,10 +66,18 @@ func on_continue_diag()->void:
 func _on_cancel_diag()->void:
 	diag_mgr.end_dlg()
 
-func _on_story_bitcheck(bit : String, jump_tag_false : String, jump_tag_true : String)->void:
+func _on_story_bitcheck(
+	bit : String,
+	jump_tag_true : String,
+	jump_tag_false : String,
+	jump_tag_null : String
+)->void:
 	print("BITCHECK!")
 	if player_journal.has_bit_tagged(bit) == false:
-		diag_mgr.advance_dlg()
+		if jump_tag_null.length() > 0:
+			diag_mgr.jump_to_tag(jump_tag_null)
+		else:
+			diag_mgr.advance_dlg()
 		return
 	if player_journal.has_bit_completed(bit) == true:
 		diag_mgr.jump_to_tag(jump_tag_true)

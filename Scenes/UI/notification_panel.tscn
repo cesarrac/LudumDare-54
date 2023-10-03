@@ -126,3 +126,5 @@ theme_override_font_sizes/font_size = 24
 text = "Message!"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="pressed" from="notification/header/M/HBoxContainer/close" to="." method="_on_close_pressed"]

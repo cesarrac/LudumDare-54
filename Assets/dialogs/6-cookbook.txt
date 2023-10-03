@@ -1,0 +1,26 @@
+#Narrator
+[ADDBIT(cookbook)]
+[TICKBIT(cookbook)]
+One of the books in the library stands out to you.
+The binding is old, the cover yellowing.
+On the cover is a curious illustration of a male chef with puffy cheeks.
+He kind of reminds you of Pavel.
+Besides the illustration there are no other symbols or letters on the cover.
+Curious you wonder what this book is and what it's doing here.:
+$first:Open the book to the FIRST page.
+$last:Open the book to the END.
+#first
+[ADDBIT(anton)]
+The title is written in a language you can't understand.
+You can clearly read the author though...
+Anton Bobrikov
+#last
+[ADDBIT(anton)]
+You find an inscription written on the back cover. It's in Spanish. It reads - 
+"A mi compañero Leonardo. No te digo adios porque te llevo en mis tripas."
+(To my partner Leornardo. Won't say goodbye, because I carry you in my stomach.)
+"Y como tú me llevas en las tuyas, procura comer bien.!"
+(And since you carry me in yours, please, make sure you eat well!)
+[ADDBIT(leo)]
+It is signed- From Anton to Leo.
+

@@ -780,6 +780,7 @@ dialog_path = "res://Assets/dialogs/2-cameraQuest.txt"
 bit_tick_tag = "camQuest"
 
 [node name="points-chapter-2" type="Node2D" parent="GameMgr/chapters"]
+visible = false
 script = ExtResource("11_carir")
 
 [node name="start" type="Marker2D" parent="GameMgr/chapters/points-chapter-2"]
@@ -811,6 +812,7 @@ position = Vector2(617, 197)
 
 [node name="dialog_1" parent="GameMgr/chapters/points-chapter-2" instance=ExtResource("9_e2nev")]
 position = Vector2(178, 36)
+dialog_path = "res://Assets/dialogs/6-cookbook.txt"
 
 [node name="dialog_2" parent="GameMgr/chapters/points-chapter-2" instance=ExtResource("9_e2nev")]
 position = Vector2(270, 372)

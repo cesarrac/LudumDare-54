@@ -37,6 +37,7 @@ func add_opts(responses : Array)->void:
 
 func end_dialog()->void:
 	text_label.clear()
+	_clear_opts()
 	$DialogPanel.hide()
 
 func toggle_cont_btn(show : bool)->void:

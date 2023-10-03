@@ -1,5 +1,7 @@
 #Narrator
 As soon as you enter the living room you hear them yelling.
+[BITCHECK(cookbook,resolution,argument,argument)]
+#argument
 Pavel and Isabel are arguing in the kitchen. It's too early for yelling!
 You gather your thoughts. This is the type of footage they want you to capture.:
 $breathe:You take a deep breath and approach them calm and professional.
@@ -10,3 +12,11 @@ Pavel follows Isabel's eyes and turns to face you.
 You're not sure if he's angrier with Isabel or at you for interrupting.
 #yell
 You step up between them, chest out back straight, and your fists clenched.
+#resolution
+You show Pavel the cook book:
+$y:Do you know this person? I think they had your last name?
+$n:Found this weird book in the library.
+#y
+Pavel's entire expression and stance change almost instantly.
+#n
+They both look at you, confused.
