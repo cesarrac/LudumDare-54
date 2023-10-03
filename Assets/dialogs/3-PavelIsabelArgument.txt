@@ -1,0 +1,12 @@
+#Narrator
+As soon as you enter the living room you hear them yelling.
+Pavel and Isabel are arguing in the kitchen. It's too early for yelling!
+You gather your thoughts. This is the type of footage they want you to capture.:
+$breathe:You take a deep breath and approach them calm and professional.
+$yell:The company asked for drama? Oh. They'll get drama.
+#breathe
+Isabel spots you first as you walk up. She glares at you over Pavel's shoulder.
+Pavel follows Isabel's eyes and turns to face you.
+You're not sure if he's angrier with Isabel or at you for interrupting.
+#yell
+You step up between them, chest out back straight, and your fists clenched.

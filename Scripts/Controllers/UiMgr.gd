@@ -72,3 +72,7 @@ func _on_nxt_chapter_btn_pressed() -> void:
 	EventMgr.fire_event(
 		"nxt_chapter_requested"
 	)
+
+
+func _on_endDlgBtn_pressed() -> void:
+	EventMgr.fire_event("cancel_dialog")

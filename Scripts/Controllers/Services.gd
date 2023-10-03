@@ -37,6 +37,9 @@ func _ready():
 	EventMgr.sub_listener(
 		"nxt_chapter_requested", nxt_chapter.bind()
 	)
+	EventMgr.sub_listener(
+		"cancel_dialog", _on_cancel_diag.bind()
+	)
 
 func nxt_chapter()->void:
 	var last : = player_journal.cur_chapter
@@ -59,6 +62,9 @@ func on_diag_selected(trigger : DialogTrigger, path : String)->void:
 func on_continue_diag()->void:
 	print("continue dialog pressed!")
 	diag_mgr.advance_dlg()
+
+func _on_cancel_diag()->void:
+	diag_mgr.end_dlg()
 
 func _on_story_bitcheck(bit : String, jump_tag_false : String, jump_tag_true : String)->void:
 	print("BITCHECK!")
@@ -99,6 +105,6 @@ func _process(delta):
 	move_input = SWTools.get_move_2d()
 	camera.move(move_input, delta)
 
-#func _unhandled_input(event):
-#	if event.is_action_pressed("test"):
-#		nxt_chapter()
+func _unhandled_input(event):
+	if event.is_action_pressed("test"):
+		nxt_chapter()

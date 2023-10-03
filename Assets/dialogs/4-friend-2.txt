@@ -1,0 +1,32 @@
+#Friend
+Hey.:
+$justHey:Hey? Are you alright?
+#justHey
+What? Hola? Nevermind. How's the job?:
+$okay:Seriously. Are you okay?
+$miserable:Sleeping terribly in that cot they left me.
+#okay
+Don't really wanna talk about it. Sorry. But thanks.
+Tell me about your job.:
+$miserable:Sleeping terribly in that cot they left me.
+#miserable
+omg Are you seriously complaining to me right now?
+How long have you been there? Less than a day?:
+$y:Yeah? Something like that! I'm not complaining. It's called sharing.
+#y
+Ugh:
+$yy:You should try it sometime.
+#yy
+Yeah, whatever.:
+$sure:I'm not even sure what I'm supposed to be doing here.
+#sure
+Probably not texting me.:
+$yyy: I'm supposed to be capturing the essence of the moment, they say.
+#yyy
+The house looks nice.:
+$yyyy:Stop deflecting.
+#yyyy
+I gotta go. Enjoy it while it lasts I guess.:
+$yyyyy:Text me later, please. You can talk to me about anything you know.
+#yyyyy
+I will.

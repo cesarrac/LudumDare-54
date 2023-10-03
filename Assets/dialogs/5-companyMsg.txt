@@ -1,0 +1,15 @@
+#Narrator
+You find an odd message in your Inbox.
+The sender used an anonymous address, a long string of numbers.
+They seem to have sent the message to a select group of employees.
+For some reason, you got a copy.:
+$read:Read the message.
+$ignore:Ignore the message and Delete it.
+#read
+(It seems to be an early draft for a company message from the CEO)
+This is a unique moment in our organization’s history. 
+Together we will sail over lands plagued by ignorance and confusion.
+Together we will Navigate to greater places where this dying Earth can be forgotten.
+#ignore
+You delete the message inmediately.
+One shouldn't take what doesn't belong to them.

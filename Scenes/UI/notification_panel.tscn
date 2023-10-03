@@ -1,21 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx6nrnxpnor2f"]
+[gd_scene load_steps=8 format=3 uid="uid://bx6nrnxpnor2f"]
 
 [ext_resource type="Texture2D" uid="uid://chox6v1e2ns4h" path="res://Assets/blank_panels.png" id="1_i5o78"]
 [ext_resource type="Theme" uid="uid://dxedjov5qmyxu" path="res://def_theme.tres" id="1_v1w7q"]
 [ext_resource type="Script" path="res://Scripts/Controllers/notification_panel.gd" id="2_demuh"]
+[ext_resource type="PackedScene" uid="uid://tw7q0cd23qk5" path="res://Scenes/UI/close_btn.tscn" id="4_sg207"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dgwo7"]
 atlas = ExtResource("1_i5o78")
 region = Rect2(48, 80, 32, 10)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o608"]
-bg_color = Color(0.831373, 0.164706, 0.164706, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2x8pg"]
-bg_color = Color(0.4, 0.0313726, 0.0313726, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_epocj"]
-bg_color = Color(0.262745, 0.0313726, 0.0313726, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kjnh1"]
 atlas = ExtResource("1_i5o78")
@@ -99,14 +91,8 @@ text = "NOTIFICATION"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="close" type="Button" parent="notification/header/M/HBoxContainer"]
-custom_minimum_size = Vector2(16, 16)
+[node name="close" parent="notification/header/M/HBoxContainer" instance=ExtResource("4_sg207")]
 layout_mode = 2
-size_flags_horizontal = 10
-size_flags_vertical = 4
-theme_override_styles/normal = SubResource("StyleBoxFlat_4o608")
-theme_override_styles/hover = SubResource("StyleBoxFlat_2x8pg")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_epocj")
 
 [node name="Panel" type="Panel" parent="notification"]
 layout_mode = 2
@@ -140,5 +126,3 @@ theme_override_font_sizes/font_size = 24
 text = "Message!"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[connection signal="pressed" from="notification/header/M/HBoxContainer/close" to="." method="_on_close_pressed"]
