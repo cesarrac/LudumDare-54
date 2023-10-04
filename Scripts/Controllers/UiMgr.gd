@@ -23,6 +23,7 @@ func fill_dialog(d_str : String)->void:
 	print("filling dialog!")
 	text_label.clear()
 	text_label.append_text(d_str)
+	toggle_cont_btn(true)
 
 func add_opts(responses : Array)->void:
 	if responses.size() <= 0: return

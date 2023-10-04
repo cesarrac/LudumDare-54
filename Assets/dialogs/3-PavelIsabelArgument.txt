@@ -2,21 +2,58 @@
 As soon as you enter the living room you hear them yelling.
 [BITCHECK(cookbook,resolution,argument,argument)]
 #argument
-Pavel and Isabel are arguing in the kitchen. It's too early for yelling!
-You gather your thoughts. This is the type of footage they want you to capture.:
-$breathe:You take a deep breath and approach them calm and professional.
-$yell:The company asked for drama? Oh. They'll get drama.
-#breathe
+Pavel and Isabel are standing in the middle of the kitchen yelling at each other.
+They're arguing over what to cook for breakfast.
+They are being very loud and probably disturbing half the house:
+$watch:Sit back and watch. A bit of morning drama.
+$spice:I should put a stop to this.
+#spice
+You take a deep breath and approach them calm and professional.
 Isabel spots you first as you walk up. She glares at you over Pavel's shoulder.
 Pavel follows Isabel's eyes and turns to face you.
 You're not sure if he's angrier with Isabel or at you for interrupting.
-#yell
-You step up between them, chest out back straight, and your fists clenched.
+"What do you want?" Isabel asks and uses her rolling eyes as cover to check for cameras.
+"Maybe I can help?"
+Pavel looks insulted. "Help? You make breakfast now? Let me guess. You want bacon and butter cakes?"
+"Pavel por Dios. It's just an egg muffin. I'm not asking to make a fucking banquet." Isabel sighs.
+"With bacon!":
+$ask1:"Have you two considered what everyone else might want?"
+$ask2:"What do you have against bacon, Pavel?
+#ask1
+"No." They say, almost synced. "Everyone not talking." Pavel admits.:
+$ask3:People are not talking to each other?
+#ask3
+Pavel looks at Isabel. She shrugs.
+#ask2
+In my country. Pigs are essential animals of life. Not for consumption!:
+$alt:Have you considered a bacon alternative?
+#alt
+Pavel looks at you with such disdain and hate that he doesn't need to speak.
+"Go away."
 #resolution
-You show Pavel the cook book:
+You show Pavel the cookbook:
 $y:Do you know this person? I think they had your last name?
 $n:Found this weird book in the library.
 #y
 Pavel's entire expression and stance change almost instantly.
+"Where did you get this?" He asks excitedly.:
+$truth:Found it in the library. It was just there, among the other books.
+#truth
+Pavel's eyes widen as he grabs his chest in an expression of pure shock.
+"We have a library?"
+He looks at Isabel and shrugs.
+"You... go ahead and cook whatever. I want to check out this library."
+Isabel shrugs. "Fine."
+"Fine."
+Pavel storms off to the library. For a moment you and Isabel stand there.
+The silence lingers. "I better go cook then." She says.
+She gives you one last look over her shoulder, as if she's just looking at you for the first time.
 #n
 They both look at you, confused.
+"What book? We're talking breakfast here!" Isabel shouts.
+"I want to make healthy breakfast, egg white omelettes with soy option for vegans." Pavel says.
+"She wants to make bacon."
+"Not just bacon! Bacon and egg sandwiches!"
+Pavel looks at you with both hands, palms up, to his side. "Do you see?"
+You show Pavel the cookbook.
+[#y]
